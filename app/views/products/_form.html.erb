@@ -28,19 +28,29 @@
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.number_field :rating %>
+    <%= form.radio_button :rating, 1 %> 1
+    <%= form.radio_button :rating, 2 %> 2
+    <%= form.radio_button :rating, 3 %> 3
+    <%= form.radio_button :rating, 4 %> 4
+    <%= form.radio_button :rating, 5 %> 5
   </div>
 
   <div class="field">
-    <%= form.label :discountinued %>
-    <%= form.check_box :discountinued %>
+    <%= form.label :discontinued %>
+    <%= form.check_box :discontinued %>
   </div>
 
   <div class="field">
     <%= form.label :publisher_id %>
-    <%= form.text_field :publisher_id %>
+    <%= form.collection_select :publisher_id, Publisher.all, :id, :name, include_blank: true %>
   </div>
 
+  <div class="field">
+    <% Category.all.each do |category| %>
+      <%= check_box_tag "product[category_ids][]", category.id, @product.category_ids.include?(category.id), id: dom_id(category) %>
+      <%= label_tag dom_id(category), category.name %> <br/>
+    <% end %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>

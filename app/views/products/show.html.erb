@@ -21,13 +21,24 @@
 </p>
 
 <p>
-  <strong>Discountinued:</strong>
-  <%= @product.discountinued %>
+  <strong>Discontinued:</strong>
+  <%= @product.discontinued %>
 </p>
 
 <p>
   <strong>Publisher:</strong>
-  <%= @product.publisher %>
+  <%= @product.publisher.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <ul>
+    <% @product.categories.each do |category| %>
+      <li>
+        <%= category.name %>
+      </li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
