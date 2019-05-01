@@ -7,3 +7,11 @@
 
 * Ruby 2.6.3
 * Rails 5.2.3
+
+
+### simple_formでform_withを書き直す
+書き換える考え方としては、
+
+* form_forをsimple_form_forにする。
+* Input要素は、<%= f.input :xxx %>にする。
+* 関連があるInput要素は、<%= f.association :yyy %>に変えて下さい。
