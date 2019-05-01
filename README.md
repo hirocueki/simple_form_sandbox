@@ -1,24 +1,9 @@
-# README
+`simple_form`の使い方を以下のリンクを参考に写経したプロジェクト。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* [Railsのform\_for内のコードをすっきりさせるsimple\_formの使い方 \- Rails Webook](https://ruby-rails.hatenadiary.com/entry/20140730/1406700205)
 
-Things you may want to cover:
 
-* Ruby version
+### 環境
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby 2.6.3
+* Rails 5.2.3
