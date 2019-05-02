@@ -1,0 +1,13 @@
+<%= simple_form_for(product) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name, label: '名前' %>
+  <%= f.input :price, label: '値段', hint: "値段は円で入力して下さい" %>
+  <%= f.input :released_on, label: '発売日'  %>
+  <%= f.input :rating, as: :radio_buttons, collection: 1..5 , label: '評価' %>
+  <%= f.input :discontinued, label: '販売中止' %>
+  <%= f.association :publisher, label: '出版元' %>
+  <%= f.association :categories, as: :check_boxes, label: 'カテゴリ'  %>
+  <%= f.button :submit %>
+
+<% end %>
